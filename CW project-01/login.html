@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        background-color: #eeeeee;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        text-align: center;
+        width: 17%;
+        height: 360px;
+        padding: 2rem;
+        margin: 1rem;
+        box-shadow: 0 0 12px 6px rgb(0 0 0 / 5%), 0 3px 6px rgb(0 0 0 / 15%);
+        border-radius: 5px;
+        background: #fff;
+      }
+      img {
+        width: 100%;
+      }
+
+      .form_button {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        outline: none;
+        background: #e40060;
+        border-radius: 4px;
+        color: #ffffff;
+      }
+
+      .form_button:hover {
+        background: #e40046;
+      }
+      .form__link {
+        text-decoration: none;
+        color: #252c6a;
+      }
+      .form__link:hover {
+        text-decoration: underline;
+        color: #2874f0;
+      }
+      .form__input {
+        width: 100%;
+        padding: 0.7rem;
+        box-sizing: border-box;
+        border: 1px solid #dddddd;
+        margin-bottom: 1rem;
+        background: #eeeeee;
+        border-radius: 4px;
+        outline: none;
+      }
+      .form__input:focus {
+        border-color: teal;
+        background: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Login Page -->
+
+      <form class="form">
+        <img
+          src="https://logos-download.com/wp-content/uploads/2016/10/SnapDeal_logo_Snap_Deal.png"
+          alt=""
+        />
+        <div>
+          <input
+            type="email"
+            placeholder="Email"
+            class="form__input"
+            id="email"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            placeholder="Password"
+            class="form__input"
+            id="password"
+          />
+          <button class="form_button" type="submit">Login</button>
+          <p><a href="" class="form__link">Forgot your password?</a></p>
+          <p>
+            <a href="" class="form__link"
+              >Don't have an account? Create account</a
+            >
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  let signin = document.getElementById("form");
+  // let heading = document.getElementById("heading");
+
+  let data = JSON.parse(localStorage.getItem("account-data"));
+  console.log(data);
+
+  signin.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    // console.log(email,password);
+    let flag = false;
+    for (let i = 0; i < data.length; i++) {
+      console.log(data[i].email, data[i].password);
+      if (data[i].email == email && data[i].password == password) {
+        flag = true;
+        break;
+      }
+    }
+    if (flag) {
+      heading.innerText = "Sign in Successful";
+    } else {
+      heading.innerText = "Wrong Credentials";
+    }
+  });
+</script>

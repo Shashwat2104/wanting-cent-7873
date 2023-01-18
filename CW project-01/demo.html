@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#navBar{
+width: 96%;
+height: 100px;
+/* border: 2px solid black; */
+
+   
+}
+
+#firstDiv{
+    /* width: 100%; */
+    height: 30px;
+    /* border: 2px solid rgb(124, 2, 231); */
+    display: flex;
+    justify-content: space-between;
+    background-color: #c7003d;
+    color: white;
+}
+#firstCornerdiv{
+    width: 100%;
+   /* border: 3px solid rgb(3, 199, 16); */
+   line-height: 6px;
+   color: white;
+}
+
+
+
+#scndCornerdiv{
+    /* padding:20px; */
+    /* margin: auto; */
+    margin-left: 22px;
+    width: 50%;
+    display: flex;
+justify-content: space-evenly;
+    /* border: 2px solid rgb(3, 235, 38); */
+  
+    color: white;
+}
+#scndCornerdiv ,a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+#secondDiv{
+    display: flex;
+    height: 65px;
+    /* border: 3px solid salmon; */
+    background-color: #e40046;
+}
+#scndDivIMG{
+ 
+    height: 50%;
+    width: 20%;
+    padding-top: 23px;
+    cursor: pointer;
+}
+
+#search{
+    width: 40%;
+    height: 40px;
+    margin-top: 20px;
+
+    color: lightslategray;
+    border: none;
+}
+#btnsearch{
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+}
+#cart{
+    /* width: 3%; */
+    display: flex;
+    color: white;
+    cursor: pointer;
+    margin-left: 90px;
+    font-weight: 30px;
+    line-height: 40px;
+    /* border: 2px solid white; */
+}
+
+#imagecart{
+    /* border: 2px solid white; */
+    width: 50px;
+    height: 30px;
+    margin-left: 3px;
+    margin-top: 25px;
+    cursor: pointer;
+
+
+}
+#signIn{
+    color: white;
+    line-height: 70px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+
+#cartandsignIN {
+  display: flex;
+  width: 30%;
+  height: 100%;
+}
+#cart {
+  display: flex;
+  color: white;
+
+  width: 100px;
+  margin-left: 100px;
+  line-height: 45px;
+  font-weight: 30px;
+  cursor: pointer;
+  /* font-size: small; */
+}
+#imagecart {
+  width: 45px;
+
+  height: 30px;
+  margin-top: 23px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+#signIN {
+  /* display: flex; */
+  /* align-items: baseline; */
+  /* position: relative; */
+  color: white;
+  line-height: 75px;
+  margin-left: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+#signbtn:hover {
+  cursor: pointer;
+  color: black;
+}
+
+#imageSinIn {
+  width: 55px;
+  /* margin-bottom: -19px; */
+  height: 25px;
+  margin-top: -65px;
+  margin-left: 60px;
+}
+
+/* now the category adjuscent part */
+#container {
+  display: grid;
+  width: 100%;
+  height: 840px;
+  border: 1px solid blue;
+  grid-template-columns: 200px;
+  grid-template-rows: 200px 100px;
+  grid-template-areas:
+    "side upper upper"
+    "side upper upper"
+    "side upper upper"
+    "side lower lower"
+    "side lower lower"
+    "side lower lower";
+}
+#sideNav {
+  grid-area: side;
+ 
+  padding: 16px;
+  /* text-align: center; */
+  margin-left:15px;
+  justify-content: space-around;
+  height: 600px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+  /* border: 1px solid red */
+}
+#upperBody {
+  grid-area: upper;
+  /* border: 1px solid blue; */
+  height: 400px;
+  display: flex;
+}
+
+#upperImg {
+
+  /* border: 1px solid red; */
+  width: 78%;
+  height: 90%;
+}
+#Slide_container {
+  border: 3px solid rgb(90, 2, 56);
+  position: relative;
+  display: flex;
+  /* display: inline; */
+  height: 88%;
+  width: 100%;
+}
+
+#Slide_container >img {
+    width: 100%;
+
+}
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.692);
+  padding: 8px 16px;
+  border-radius: 50%;
+}
+.next {
+  right: 10px;
+}
+.prev {
+  left: 10px;
+}
+.slide {
+  display: none;
+}
+.manual_btn:hover {
+  text-decoration-line: underline blue;
+}
+#imagebottom {
+  /* border: 1px solid red; */
+
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+.imageBottomText {
+  /* border: 1px solid green; */
+  margin-left: 50px;
+  padding-top: 5px;
+  color: #333333;
+  font-weight: lighter;
+  border: none;
+  background-color: white;
+}
+#pincodediv {
+
+  /* border: 1px solid green; */
+  margin-left: 10px;
+  width: 25%;
+  height: 90%;
+  text-align: center;
+}
+#mapImage {
+  /* margin-bo: 0px; */
+  height: 55%;
+  padding: 30px;
+}
+#input-container {
+  height: 40px;
+  display: block;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  border: grey;
+}
+
+#pincodeBtn {
+  display: flex;
+  color: red;
+
+  margin-top: 20px;
+  height: 10%;
+}
+#SubmitBtn {
+  width: 150px;
+  padding-left: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+#NextBtn {
+  margin-left: 30px;
+  width: 70px;
+  color: grey;
+  border: none;
+  cursor: pointer;
+}
+
+#lowerBoddy {
+  grid-area: lower;
+  /* border: 1px solid green; */
+  height:430px;
+  display: flex;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+  
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.Timagebox {
+  height: 100%;
+  min-width: 20%;
+  /* border: 1px solid navy; */
+  margin-left: 10px;
+  /* flex: 0 0 auto; */
+}
+
+.Timage {
+  width: 100%;
+  height: 70%;
+}
+.productsText {
+  width: 187px;
+  height: 180px;
+  display: block;
+  padding-left: 5px;
+  line-height: 25px;
+}
+.price {
+  display: flex;
+  padding-left: 2px;
+}
+.price button {
+  width: 60px;
+  margin-left: 6px;
+  height: 20px;
+}
+.price .cut {
+  text-decoration: line-through;
+}
+
+#productFooter{
+  width: 100%;
+  /* border: 1px solid green;  */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!------------------------------------- this code is for nav bar------ =========================-->
+<div id="navBar">
+    <div id="firstDiv">
+<div id="firstCornerdiv">
+    <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+</div>
+<div id="scndCornerdiv">
+<div class="firstDivConerText"><a href="">Impact@Snapdeal</a></div>
+<div class="firstDivConerText"><a href="">Gift Cards</a></div>
+<div class="firstDivConerText"><a href=""></a></div>
+<div class="firstDivConerText"><a href="">Help Center</a></div>
+<div class="firstDivConerText"><a href="">Sell On Snapdeal</a></div>
+<!-- <div class="firstDivConerText">
+<div id="mobileImg">
+
+
+
+    <img src="https://i4.sdlcdn.com/img/platinum09/downloadappicon2ndsep.png" alt="">
+</div>
+<div id="mobileText">
+    <p>Download App</p>
+</div>
+</div>
+</div> -->
+</div>
+</div>
+
+<div id="secondDiv">
+    <img  id="scndDivIMG" src="https://logos-download.com/wp-content/uploads/2016/10/SnapDeal_logo_Snap_Deal.png" alt="">
+<label for="search"></label>
+<input id="search" type="search">
+<button id="btnsearch">Search</button>
+<div id="cart">
+    <p>Cart</p>
+</div>
+<div id="imagecart">
+    <img width="50%" src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="">
+</div>
+
+<div id="signIn">
+   
+
+    <div id="signbtn"> sign In</div>
+
+    <div  id="imagesignin" >
+        <img width="50%" src="" alt="">
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+            <div id="signIN" onclick="bat()">
+              <!-- signIn -->
+                <div 
+                id="signbtn">Sign In
+                </div>
+                <div id="imageSinIn"onclick="bat()">
+                  <img
+                    width="50%"
+                    src="https://cdn-icons.flaticon.com/png/512/666/premium/666201.png?token=exp=1635796006~hmac=fead5a874b251aca542ac69cc7ed9d17"
+                    alt=""
+                  />
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- abaove code is for nav bar------------------------------------ -->
+
+    <div id="container">
+      <div id="sideNav">
+        <p>TOP CATEGORIES</p>
+        <p>All Offers</p>
+        <p>Mobile And Tablets</p>
+        <p>Electronics</p>
+        <p>Computing And Gaming</p>
+        <p>Home And Kitchen</p>
+        <p>More Categories</p>
+        <p>Men Fashion</p>
+        <p>Women Fashion</p>
+        <p>Toys kids & More</p>
+        <p>Beauty Health and Daily Needs</p>
+        <p>Sports Fitness & Outdoor</p>
+        <p>Car & MotorBike</p>
+        <p>Hobbies</p>
+        <p>Books,Media & Music</p>
+        <p>See All Categories</p>
+      </div>
+      <div id="upperBody">
+        <div id="upperImg">
+          <div id="Slide_container">
+            <div class="slide">
+              <img
+                class="slider_img"
+                src="https://media.istockphoto.com/photos/totally-free-full-length-of-handsome-young-man-keeping-arms-while-picture-id1157131733?k=20&m=1157131733&s=612x612&w=0&h=utZ5327CRMN6amf_XZ6PDMukWeQSuUb1lfTp_4uO2gM="
+                alt=""
+              />
+            </div>
+
+            <div class="slide">
+              <img id="image1" class="slider_img" src="https://media.istockphoto.com/photos/handsome-young-african-man-looking-at-camera-and-keeping-hand-on-chin-picture-id1192089195?k=20&m=1192089195&s=612x612&w=0&h=plnkOz_fjdZ6jUPZywlpP0xo0CNVRzYBGuE-itneBpk=" alt="">
+            </div>
+
+            <div class="slide">
+              <img id="image2" class="slider_img" src="https://media.istockphoto.com/photos/curiosity-young-bearded-and-handsome-man-in-casual-clothes-is-looking-picture-id1129816771?k=20&m=1129816771&s=612x612&w=0&h=UFjzIWr49G6eDXIcUIsxjhaMt9YN2iIOOo0r2BnGThk=" alt="">
+            </div>
+
+            <div class="slide">
+              <img id="image3" class="slider_img" src="https://media.istockphoto.com/photos/fulllength-portrait-of-an-asian-man-on-a-white-background-picture-id1328526567?k=20&m=1328526567&s=612x612&w=0&h=lQr-ZO-En1MfBhgaqBZMlGluus6wZJj34n1ouO1sHV8=" alt="">
+            </div>
+
+            <div class="slide">
+              <img id="image4" class="slider_img" src="https://media.istockphoto.com/photos/man-with-bright-smile-sitting-on-the-floor-picture-id698590076?k=20&m=698590076&s=612x612&w=0&h=wcd9RMT5YvTd9LB3dZV8WOi85EN28vb2Z2Ez-jwJK_0=" alt="">
+            </div>
+
+            <span class="arrow prev" onclick=" controller(-1)">&#10094;</span>
+            <span class="arrow next" onclick=" controller(1)">&#10095;</span>
+          </div>
+
+          <div id="imagebottom">
+          <button class="imageBottomText" id="btn1"  onclick=" controller(-1)" >Snapdeal</button>
+          <button class="imageBottomText" id="btn2" onclick=" controller(-1)" >Download Our App</button>
+          <button class="imageBottomText" id="btn3"  onclick=" controller(-1)" >Diya Idols And More</button>
+          <button class="imageBottomText" id="btn4"onclick=" controller(-1)" >Cookware Collection</button>
+          <button class="imageBottomText" id="btn5"  onclick=" controller(-1)" >Fashion Jwellery</button>
+
+            <!-- <div class="imageBottomText">Snapdeal</div>
+            <div class="imageBottomText">Download Our App</div>
+            <div class="imageBottomText">Diya Idols And More</div>
+            <div class="imageBottomText">Cookware Collection</div>
+            <div class="imageBottomText">Fashion Jwellery</div> -->
+          </div>
+          <div class="navigation_manual">
+            <label for="btn1" class="manual_btn"></label>
+            <label for="btn2" class="manual_btn"></label>
+            <label for="btn3" class="manual_btn"></label>
+            <label for="btn4" class="manual_btn"></label>
+            <label for="btn5" class="manual_btn"></label>
+          </div>
+        </div>
+        <div id="pincodediv">
+          <div id="mapImage">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/854/854894.png"
+              alt=""
+            />
+            <p style="color: #999999">Your Delivery Pincode</p>
+            <p style="color: #5a5a59">
+              Enter your pincode to check the availability and faster delivery
+            </p>
+          </div>
+
+          <div id="input-container">
+            <div id="number">
+              <input type="number" id="inputPin" placeholder="Enter pincode" />
+              <p id="pintext" style="margin-top: 0px; color: red"></p>
+            </div>
+            <p id="value"></p>
+          </div>
+          <div id="pincodeBtn">
+            <button id="SubmitBtn">Submit</button>
+            <button id="NextBtn">
+              <span>Next</span>
+            </button>
+          </div>
+        </div>
+        <br>
+        <!-- <div>
+          <p>dhhd</p>
+        </div> -->
+      </div>
+         
+</body>
+</html>
+<script src="dash.js"></script>
