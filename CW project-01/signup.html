@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Page</title>
+    <a href="./login.html"></a>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         display: flex;
@@ -12,7 +20,7 @@
         justify-content: center;
         font-size: 20px;
         height: 100vh;
-        background-color:#EEEEEE;
+        background-color: #eeeeee;
       }
       .container {
         display: flex;
@@ -23,7 +31,7 @@
         margin: 1rem;
         box-shadow: 0 0 12px 6px rgb(0 0 0 / 5%), 0 3px 6px rgb(0 0 0 / 15%);
         border-radius: 4px;
-        background:#fff;
+        background: #fff;
       }
       img {
         width: 100%;
@@ -39,7 +47,7 @@
         outline: none;
         background: #e40060;
         border-radius: 4px;
-        color:#ffffff;
+        color: #ffffff;
       }
       .form_button:hover {
         background: #e40046;
@@ -65,9 +73,8 @@
         border: 1px solid #dddddd;
         border-radius: 5px;
         margin-bottom: 1rem;
-        background:#eeeeee;
+        background: #eeeeee;
         outline: none;
-       
       }
     </style>
   </head>
@@ -82,7 +89,12 @@
         />
 
         <div>
-          <input type="text" placeholder="UserName" class="form__input" />
+          <input
+            type="text"
+            id="name"
+            placeholder="UserName"
+            class="form__input"
+          />
         </div>
         <div>
           <input
@@ -109,15 +121,10 @@
             class="form__input"
           />
         </div>
-        <div>
-          <input
-            type="password"
-            id="password"
-            placeholder="Confirm Password"
-            class="form__input"
-          />
-        </div>
-        <button class="form_button" type="submit">Continue</button>
+
+        <a href="./login.html">
+          <button class="form_button" type="submit">Continue</button></a
+        >
         <p>
           <a href="" class="form__link">Already have an account? Login</a>
         </p>

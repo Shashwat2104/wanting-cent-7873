@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<style>
+  #slideshow >img{
+    /* border: 2px solid darkgreen; */
+    width:100%;
+    height: 340px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
 </head>
 <body>
     <!------------------------------------- this code is for nav bar------ =========================-->
@@ -44,7 +56,7 @@
     <p>Cart</p>
 </div>
 <div id="imagecart">
-    <img width="50%" src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="">
+    <img width="50%" src="" alt="">
 </div>
 
 <div id="signIn">
@@ -111,32 +123,9 @@
       </div>
       <div id="upperBody">
         <div id="upperImg">
-          <div id="Slide_container">
-            <div class="slide">
-              <img
-                class="slider_img"
-                src="https://media.istockphoto.com/photos/totally-free-full-length-of-handsome-young-man-keeping-arms-while-picture-id1157131733?k=20&m=1157131733&s=612x612&w=0&h=utZ5327CRMN6amf_XZ6PDMukWeQSuUb1lfTp_4uO2gM="
-                alt=""
-              />
-            </div>
 
-            <div class="slide">
-              <img id="image1" class="slider_img" src="https://media.istockphoto.com/photos/handsome-young-african-man-looking-at-camera-and-keeping-hand-on-chin-picture-id1192089195?k=20&m=1192089195&s=612x612&w=0&h=plnkOz_fjdZ6jUPZywlpP0xo0CNVRzYBGuE-itneBpk=" alt="">
-            </div>
+          <div id="slideshow">
 
-            <div class="slide">
-              <img id="image2" class="slider_img" src="https://media.istockphoto.com/photos/curiosity-young-bearded-and-handsome-man-in-casual-clothes-is-looking-picture-id1129816771?k=20&m=1129816771&s=612x612&w=0&h=UFjzIWr49G6eDXIcUIsxjhaMt9YN2iIOOo0r2BnGThk=" alt="">
-            </div>
-
-            <div class="slide">
-              <img id="image3" class="slider_img" src="https://media.istockphoto.com/photos/fulllength-portrait-of-an-asian-man-on-a-white-background-picture-id1328526567?k=20&m=1328526567&s=612x612&w=0&h=lQr-ZO-En1MfBhgaqBZMlGluus6wZJj34n1ouO1sHV8=" alt="">
-            </div>
-
-            <div class="slide">
-              <img id="image4" class="slider_img" src="https://media.istockphoto.com/photos/man-with-bright-smile-sitting-on-the-floor-picture-id698590076?k=20&m=698590076&s=612x612&w=0&h=wcd9RMT5YvTd9LB3dZV8WOi85EN28vb2Z2Ez-jwJK_0=" alt="">
-            </div>
-
-         
           </div>
 
           <div id="imagebottom">
@@ -145,7 +134,7 @@
 
 
           <p>WesternWear</p>
-          <p>Automotives</p>
+          <a class="next" href="product.html">  <p>Automotives</p></a>
           <p>Kurta Sets</p>
           <p>Kurta Sets</p>
           <p>Electronic</p>
@@ -165,26 +154,26 @@
         <div id="pincodediv">
           <div id="mapImage">
             <img
-              src="https://cdn-icons-png.flaticon.com/128/854/854894.png"
+              src="map.png"
               alt=""
             />
-            <p style="color: #999999">Your Delivery Pincode</p>
-            <p style="color: #5a5a59">
+            <!-- <p style="color: #999999">Your Delivery Pincode</p>
+             <p style="color: #5a5a59">
               Enter your pincode to check the availability and faster delivery
-            </p>
+            </p> -->
           </div>
 
-          <div id="input-container">
+           <div id="input-container">
             <div id="number">
               <input type="number" id="inputPin" placeholder="Enter pincode" />
               <p id="pintext" style="margin-top: 0px; color: red"></p>
             </div>
             <p id="value"></p>
-          </div>
+          </div> 
           <div id="pincodeBtn">
             <button id="SubmitBtn">Submit</button>
             <button id="NextBtn">
-              <span>Next</span>
+             
             </button>
           </div>
         </div>
@@ -218,7 +207,7 @@
 <div id="DisplayProducts">
 
 <div id="ProductText">
-  <h2>Lorem ipsum dolor sit.</h2>
+  <h1>Recommend products</h1>
 </div>
 
     <div id="bottom_product">
@@ -226,69 +215,68 @@
 
        <div class="item1">
       
-        <img src="https://n2.sdlcdn.com/imgs/j/o/r/large/Veirdo-100-Percent-Cotton-Green-SDL302182620-1-1ba35.jpeg">
-        <h3>lorem2</h3>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum.</p>
+        <img src="https://n3.sdlcdn.com/imgs/j/b/9/large/Kaspersky-Total-Security-Latest-Version-SDL811598627-1-aa480.jpeg">
+        <h3>Kaspersky Total Security Latest Version</h3>
+        <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
+     
       </div>
       <div class="item2">
-        <img src="https://n3.sdlcdn.com/imgs/j/f/c/large/SM-2-in-1-Rechargeable-SDL951195659-1-126be.jpg">
+        <img src="https://n1.sdlcdn.com/imgs/g/0/c/sdl696844457-4a3c3.jpg">
     
 
-        <h3>lorem2</h3>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum.</p>
+        <h3>Frontech JIL- 3442 Over Ear Wired With Mic Headphones/Earphones</h3>
+        <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
+       
       </div>
       <div class="item3">
-        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
+        <img src="https://n1.sdlcdn.com/imgs/i/h/e/large/Dell-MS116-Black-USB-Wired-SDL395369550-3-9dc12.jpeg">
+       <h3>Dell MS116 Black USB Wired Mouse</h3>
        
-        <p>Leathers of india Leather Brown</p>
-      <p>Formal Regular Wallet</p>
       <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
       </div>
       <div class="item4">
-        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
-        <h3>lorem2</h3>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum.</p>
+        <img src="https://n1.sdlcdn.com/imgs/i/6/1/large/SanDisk-Cruzer-Blade-USB-Flash-1040103-1-79003.webp">
+        <h3>SanDisk Cruzer Blade USB Flash Drive 32GB</h3>
+        <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
+     
       </div>
       <div class="item5">
-        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
-        <h3>lorem2</h3>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum.</p>
+        <img src="https://n3.sdlcdn.com/imgs/j/s/i/Rock-Light-Electric-Cordless-Clipper-SDL026812710-1-6f664.jpeg">
+        <h3>Rock Light Electric Trimmer Clipper ( RED )</h3>
+        <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
+      
       </div>
 
       <div class="item1">
       
-        <img src="https://n2.sdlcdn.com/imgs/j/o/r/large/Veirdo-100-Percent-Cotton-Green-SDL302182620-1-1ba35.jpeg">
-        <h3>lorem2</h3>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum.</p>
+        <img src="https://n4.sdlcdn.com/imgs/j/v/8/large/ASUS-VivoBook15-X515EA-BQ312TS-Intel-SDL507058472-1-73d1e.webp">
+        <h3>ASUS VivoBook15-X515EA-BQ312TS-Intel Core i3-1115G4 </h3>
+        <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
+    
       </div>
       <div class="item2">
-        <img src="https://n3.sdlcdn.com/imgs/j/f/c/large/SM-2-in-1-Rechargeable-SDL951195659-1-126be.jpg">
+        <img src="https://n2.sdlcdn.com/imgs/g/p/m/AMERICAN-MICRONIC-Above-32-Litres-SDL708896962-1-be367.jpg">
     
 
-        <h3>lorem2</h3>
-        <p>Lorem, ipsum dolor.</p>
-        <p>Lorem, ipsum.</p>
+        <h3>AMERICAN MICRONIC 36L Oven Toaster Grill OTG (2000 W)</h3>
+        <span style="text-decoration: line-through; color: #666666;">Rs.1,499</span><span>Rs.549</span>
+     
       </div>
       <div class="item3">
-        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
-        <h3>lorem2</h3>
+        <img src= "https://n2.sdlcdn.com/imgs/j/p/c/Tecno-Spark-Go-2020-Shock-SDL297539215-2-675b6.jpg">
+        <h3>Tecno Spark Go 2020 Shock Proof Case Shining Stars - Transparent</h3>
         <p>Lorem, ipsum dolor.</p>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="item4">
-        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
-        <h3>lorem2</h3>
+        <img src="https://n3.sdlcdn.com/imgs/i/p/w/Dish-TV-HD-Super-Family-SDL568758227-1-cc99f.jpeg">
+        <h3>Dish TV HD Super Family HD with 1 month Subscription Free</h3>
         <p>Lorem, ipsum dolor.</p>
         <p>Lorem, ipsum.</p>
       </div>
       <div class="item5">
-        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
-        <h3>lorem2</h3>
+        <img src="https://n1.sdlcdn.com/imgs/j/e/c/Ambrane-PP-20-20000-mAh-SDL497847923-1-23d77.jpg">
+        <h3>Ambrane PP-20 20000 -mAh Li-Polymer Power Bank Black</h3>
         <p>Lorem, ipsum dolor.</p>
         <p>Lorem, ipsum.</p>
       </div> -->
@@ -492,4 +480,4 @@
          
 </body>
 </html>
-<!-- <script src="dash.js"></script> -->
+<script src="dash.js"></script>

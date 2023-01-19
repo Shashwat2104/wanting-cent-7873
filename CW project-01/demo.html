@@ -1,441 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .topThinBar {
+        background-color: #c7363d;
+        color: white;
+        font-size: 12px;
+      }
 
-#navBar{
-width: 96%;
-height: 100px;
-/* border: 2px solid black; */
+      .topThinBar > div {
+        display: flex;
+        justify-content: space-between;
+        line-height: 5px;
+        max-width: 1402px;
+        margin: auto;
+      }
 
-   
-}
+      .topThinBar > div > div:nth-of-type(2) {
+        display: flex;
+        gap: 10px;
+      }
 
-#firstDiv{
-    /* width: 100%; */
-    height: 30px;
-    /* border: 2px solid rgb(124, 2, 231); */
-    display: flex;
-    justify-content: space-between;
-    background-color: #c7003d;
-    color: white;
-}
-#firstCornerdiv{
-    width: 100%;
-   /* border: 3px solid rgb(3, 199, 16); */
-   line-height: 6px;
-   color: white;
-}
+      .topThinBar > div > div:nth-of-type(2) > p {
+        cursor: pointer;
+      }
 
+      nav {
+        background-color: #e53f46;
+        height: 65px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+      }
 
+      nav > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        max-width: 1402px;
+        margin: auto;
+        width: 100%;
+        height: 65px;
+      }
 
-#scndCornerdiv{
-    /* padding:20px; */
-    /* margin: auto; */
-    margin-left: 22px;
-    width: 50%;
-    display: flex;
-justify-content: space-evenly;
-    /* border: 2px solid rgb(3, 235, 38); */
-  
-    color: white;
-}
-#scndCornerdiv ,a{
-    text-decoration: none;
-    color: white;
-}
+      nav > div > div:nth-of-type(1) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: #fff;
+        /* max-width: 1600px; */
+        /* margin: auto; */
+        width: 70%;
+      }
 
+      nav > div > div:nth-of-type(1) > a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
 
+      nav > div > div:nth-of-type(2) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: #fff;
+        /* max-width: 1600px; */
+        /* margin: auto; */
+        width: 25%;
+      }
 
-#secondDiv{
-    display: flex;
-    height: 65px;
-    /* border: 3px solid salmon; */
-    background-color: #e40046;
-}
-#scndDivIMG{
- 
-    height: 50%;
-    width: 20%;
-    padding-top: 23px;
-    cursor: pointer;
-}
+      .sd-logo {
+        width: 142px;
+        height: 30px;
+        margin-right: 58px;
+      }
 
-#search{
-    width: 40%;
-    height: 40px;
-    margin-top: 20px;
+      nav > div > div:nth-of-type(2) > p {
+        font-size: 13px;
+      }
 
-    color: lightslategray;
-    border: none;
-}
-#btnsearch{
-    height: 40px;
-    width: 100px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    margin-top: 20px;
-    border: none;
-}
-#cart{
-    /* width: 3%; */
-    display: flex;
-    color: white;
-    cursor: pointer;
-    margin-left: 90px;
-    font-weight: 30px;
-    line-height: 40px;
-    /* border: 2px solid white; */
-}
+      .searchBar {
+        min-width: 400px;
+        width: 100%;
+        max-width: 880px;
+        display: flex;
+        justify-content: center;
+      }
 
-#imagecart{
-    /* border: 2px solid white; */
-    width: 50px;
-    height: 30px;
-    margin-left: 3px;
-    margin-top: 25px;
-    cursor: pointer;
+      .searchBar > input {
+        width: 78%;
+        padding: 0 10px 0 32px;
+        height: 37px;
+        border: 0;
+        border-radius: 2px;
+        background-color: rgb(244, 244, 244);
+      }
 
+      .searchBar > button {
+        /* padding: 10px 5%; */
+        width: 16.67%;
+        border: 0;
+        border-radius: 2px;
+        background-color: #333;
+        color: white;
+        font-size: 14px;
+        padding: 0 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
 
-}
-#signIn{
-    color: white;
-    line-height: 70px;
-    cursor: pointer;
-    margin-left: 100px;
-}
+      .searchBar > button:hover {
+        background-color: #3f3f3f;
+      }
 
+      .cartButton {
+        border-left: 1px solid #ce3840;
+        border-right: 1px solid #ce3840;
+        min-width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        max-width: 150px;
+        /* margin-left: 9%; */
+        height: 100%;
+        font-size: 13px;
+        /* justify-self: flex-end; */
+        cursor: pointer;
+      }
 
-#cartandsignIN {
-  display: flex;
-  width: 30%;
-  height: 100%;
-}
-#cart {
-  display: flex;
-  color: white;
+      .cartButton > img {
+        margin-left: 5px;
+      }
 
-  width: 100px;
-  margin-left: 100px;
-  line-height: 45px;
-  font-weight: 30px;
-  cursor: pointer;
-  /* font-size: small; */
-}
-#imagecart {
-  width: 45px;
+      .signinButton {
+        min-width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        max-width: 180px;
+        font-size: 13px;
+        /* margin-left: 9%; */
+        height: 60px;
+        cursor: pointer;
+      }
 
-  height: 30px;
-  margin-top: 23px;
-  margin-left: 5px;
-  cursor: pointer;
-}
-#signIN {
-  /* display: flex; */
-  /* align-items: baseline; */
-  /* position: relative; */
-  color: white;
-  line-height: 75px;
-  margin-left: 100px;
-  cursor: pointer;
-  position: relative;
-}
+      .signinButton:hover {
+        background-color: #333;
+        border-radius: 5px;
+      }
 
-#signbtn:hover {
-  cursor: pointer;
-  color: black;
-}
+      .signinButton > div:nth-of-type(2) {
+        width: 37px;
+        height: 37px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+      }
 
-#imageSinIn {
-  width: 55px;
-  /* margin-bottom: -19px; */
-  height: 25px;
-  margin-top: -65px;
-  margin-left: 60px;
-}
+      #nav_signin {
+        position: relative;
+      }
 
-/* now the category adjuscent part */
-#container {
-  display: grid;
-  width: 100%;
-  height: 840px;
-  border: 1px solid blue;
-  grid-template-columns: 200px;
-  grid-template-rows: 200px 100px;
-  grid-template-areas:
-    "side upper upper"
-    "side upper upper"
-    "side upper upper"
-    "side lower lower"
-    "side lower lower"
-    "side lower lower";
-}
-#sideNav {
-  grid-area: side;
- 
-  padding: 16px;
-  /* text-align: center; */
-  margin-left:15px;
-  justify-content: space-around;
-  height: 600px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      #nav_signin > ul {
+        background-color: #333;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        position: absolute;
+        left: -70px;
+        top: 34px;
+        width: 500%;
+        padding-top: 20px;
+        padding-left: 0;
+        border-radius: 5px;
+      }
 
-  /* border: 1px solid red */
-}
-#upperBody {
-  grid-area: upper;
-  /* border: 1px solid blue; */
-  height: 400px;
-  display: flex;
-}
+      #nav_signin > ul > li {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        margin-bottom: 0;
+        cursor: pointer;
+      }
 
-#upperImg {
+      #nav_signin > ul > li > img {
+        width: 18px;
+        margin-right: 10px;
+      }
 
-  /* border: 1px solid red; */
-  width: 78%;
-  height: 90%;
-}
-#Slide_container {
-  border: 3px solid rgb(90, 2, 56);
-  position: relative;
-  display: flex;
-  /* display: inline; */
-  height: 88%;
-  width: 100%;
-}
+      #nav_signin > ul > li:hover {
+        background-color: rgba(29, 28, 28, 0.356);
+      }
 
-#Slide_container >img {
-    width: 100%;
+      #nav_signin > ul > hr {
+        width: 99%;
+        border: 1px solid #555;
+      }
 
-}
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 45%;
-  background-color: rgba(255, 255, 255, 0.692);
-  padding: 8px 16px;
-  border-radius: 50%;
-}
-.next {
-  right: 10px;
-}
-.prev {
-  left: 10px;
-}
-.slide {
-  display: none;
-}
-.manual_btn:hover {
-  text-decoration-line: underline blue;
-}
-#imagebottom {
-  /* border: 1px solid red; */
+      #nav_signin > ul > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+      }
 
-  width: 100%;
-  height: 10%;
-  display: flex;
-}
-.imageBottomText {
-  /* border: 1px solid green; */
-  margin-left: 50px;
-  padding-top: 5px;
-  color: #333333;
-  font-weight: lighter;
-  border: none;
-  background-color: white;
-}
-#pincodediv {
+      #nav_signin > ul > div > p:nth-of-type(1) {
+        text-align: center;
+        font-size: 11px;
+        color: #b4b4b4;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
 
-  /* border: 1px solid green; */
-  margin-left: 10px;
-  width: 25%;
-  height: 90%;
-  text-align: center;
-}
-#mapImage {
-  /* margin-bo: 0px; */
-  height: 55%;
-  padding: 30px;
-}
-#input-container {
-  height: 40px;
-  display: block;
-  border-radius: 5px;
-  background-color: #fbfbfb;
-  border: grey;
-}
+      #nav_signin > ul > div > p:nth-of-type(2) {
+        text-align: center;
+        margin-top: 0;
+      }
 
-#pincodeBtn {
-  display: flex;
-  color: red;
+      #nav_signin > ul > div > button {
+        color: #ffffff;
+        background-color: #e40046;
+        font-size: 13px;
+        margin-bottom: 0px;
+        cursor: pointer;
+        height: 40px;
+        border-radius: 3px;
+        border: 0;
+        font-weight: 400;
+        width: 90%;
+        margin-bottom: 10px;
+      }
 
-  margin-top: 20px;
-  height: 10%;
-}
-#SubmitBtn {
-  width: 150px;
-  padding-left: 10px;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  margin-left: 10px;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-#NextBtn {
-  margin-left: 30px;
-  width: 70px;
-  color: grey;
-  border: none;
-  cursor: pointer;
-}
+      /* now the category adjuscent part */
+      #container {
+        display: grid;
+        width: 100%;
+        height: 840px;
+        border: 1px solid blue;
+        grid-template-columns: 200px;
+        grid-template-rows: 200px 100px;
+        grid-template-areas:
+          "side upper upper"
+          "side upper upper"
+          "side upper upper"
+          "side lower lower"
+          "side lower lower"
+          "side lower lower";
+      }
+      #sideNav {
+        grid-area: side;
 
-#lowerBoddy {
-  grid-area: lower;
-  /* border: 1px solid green; */
-  height:430px;
-  display: flex;
+        padding: 16px;
+        /* text-align: center; */
+        margin-left: 15px;
+        justify-content: space-around;
+        height: 600px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-  overflow-x: auto;
+        /* border: 1px solid red */
+      }
+      #upperBody {
+        grid-area: upper;
+        /* border: 1px solid blue; */
+        height: 400px;
+        display: flex;
+      }
 
-  overflow-y: hidden;
-  
-}
-::-webkit-scrollbar{
-    display: none;
-}
-.Timagebox {
-  height: 100%;
-  min-width: 20%;
-  /* border: 1px solid navy; */
-  margin-left: 10px;
-  /* flex: 0 0 auto; */
-}
+      #upperImg {
+        /* border: 1px solid red; */
+        width: 78%;
+        height: 90%;
+      }
+      #Slide_container {
+        border: 3px solid rgb(90, 2, 56);
+        position: relative;
+        display: flex;
+        /* display: inline; */
+        height: 88%;
+        width: 100%;
+      }
 
-.Timage {
-  width: 100%;
-  height: 70%;
-}
-.productsText {
-  width: 187px;
-  height: 180px;
-  display: block;
-  padding-left: 5px;
-  line-height: 25px;
-}
-.price {
-  display: flex;
-  padding-left: 2px;
-}
-.price button {
-  width: 60px;
-  margin-left: 6px;
-  height: 20px;
-}
-.price .cut {
-  text-decoration: line-through;
-}
+      #Slide_container > img {
+        width: 100%;
+      }
+      .arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        background-color: rgba(255, 255, 255, 0.692);
+        padding: 8px 16px;
+        border-radius: 50%;
+      }
 
-#productFooter{
-  width: 100%;
-  /* border: 1px solid green;  */
-}
+      #slideshow {
+        grid-area: b;
+        height: 330px;
+        overflow: hidden;
+      }
 
+      #slideshow > img {
+        width: 100%;
+        height: 100%;
+      }
+      .manual_btn:hover {
+        text-decoration-line: underline blue;
+      }
+      #imagebottom {
+        /* border: 1px solid red; */
 
+        width: 100%;
+        height: 10%;
+        display: flex;
+      }
+      .imageBottomText {
+        /* border: 1px solid green; */
+        margin-left: 50px;
+        padding-top: 5px;
+        color: #333333;
+        font-weight: lighter;
+        border: none;
+        background-color: white;
+      }
+      #pincodediv {
+        /* border: 1px solid green; */
+        margin-left: 10px;
+        width: 25%;
+        height: 90%;
+        text-align: center;
+      }
+      #mapImage {
+        /* margin-bo: 0px; */
+        height: 55%;
+        padding: 30px;
+      }
+      #input-container {
+        height: 40px;
+        display: block;
+        border-radius: 5px;
+        background-color: #fbfbfb;
+        border: grey;
+      }
 
+      #pincodeBtn {
+        display: flex;
+        color: red;
+
+        margin-top: 20px;
+        height: 10%;
+      }
+      #SubmitBtn {
+        width: 150px;
+        padding-left: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        margin-left: 10px;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+      #NextBtn {
+        margin-left: 30px;
+        width: 70px;
+        color: grey;
+        border: none;
+        cursor: pointer;
+      }
+
+      #lowerBoddy {
+        grid-area: lower;
+        /* border: 1px solid green; */
+        height: 430px;
+        display: flex;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .Timagebox {
+        height: 100%;
+        min-width: 20%;
+        /* border: 1px solid navy; */
+        margin-left: 10px;
+        /* flex: 0 0 auto; */
+      }
+
+      .Timage {
+        width: 100%;
+        height: 70%;
+      }
+      .productsText {
+        width: 187px;
+        height: 180px;
+        display: block;
+        padding-left: 5px;
+        line-height: 25px;
+      }
+      .price {
+        display: flex;
+        padding-left: 2px;
+      }
+      .price button {
+        width: 60px;
+        margin-left: 6px;
+        height: 20px;
+      }
+      .price .cut {
+        text-decoration: line-through;
+      }
+
+      #productFooter {
+        width: 100%;
+        /* border: 1px solid green;  */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!------------------------------------- this code is for nav bar------ =========================-->
-<div id="navBar">
-    <div id="firstDiv">
-<div id="firstCornerdiv">
-    <p>Brand Waali Quality, Bazaar Waali Deal!</p>
-</div>
-<div id="scndCornerdiv">
-<div class="firstDivConerText"><a href="">Impact@Snapdeal</a></div>
-<div class="firstDivConerText"><a href="">Gift Cards</a></div>
-<div class="firstDivConerText"><a href=""></a></div>
-<div class="firstDivConerText"><a href="">Help Center</a></div>
-<div class="firstDivConerText"><a href="">Sell On Snapdeal</a></div>
-<!-- <div class="firstDivConerText">
-<div id="mobileImg">
-
-
-
-    <img src="https://i4.sdlcdn.com/img/platinum09/downloadappicon2ndsep.png" alt="">
-</div>
-<div id="mobileText">
-    <p>Download App</p>
-</div>
-</div>
-</div> -->
-</div>
-</div>
-
-<div id="secondDiv">
-    <img  id="scndDivIMG" src="https://logos-download.com/wp-content/uploads/2016/10/SnapDeal_logo_Snap_Deal.png" alt="">
-<label for="search"></label>
-<input id="search" type="search">
-<button id="btnsearch">Search</button>
-<div id="cart">
-    <p>Cart</p>
-</div>
-<div id="imagecart">
-    <img width="50%" src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="">
-</div>
-
-<div id="signIn">
-   
-
-    <div id="signbtn"> sign In</div>
-
-    <div  id="imagesignin" >
-        <img width="50%" src="" alt="">
+    <!-- Top navigation starts -->
+    <div class="topThinBar">
+      <div>
+        <div>
+          <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+        </div>
+        <div>
+          <p>Gift Cards</p>
+          <p>Help Center</p>
+          <p>Sell On Snapdeal</p>
+          <img
+            src="https://i4.sdlcdn.com/img/platinum09/downloadappicon2ndsep.png"
+            style="width: 13px; height: 18px; margin: 5px 0 0 5px"
+          />
+          <p>Download App</p>
+        </div>
+      </div>
     </div>
-</div>
+    <nav>
+      <div>
+        <div>
+          <a href="home.html">
+            <img
+              class="sd-logo"
+              src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg"
+            />
+          </a>
 
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-            <div id="signIN" onclick="bat()">
-              <!-- signIn -->
-                <div 
-                id="signbtn">Sign In
-                </div>
-                <div id="imageSinIn"onclick="bat()">
+          <div class="searchBar">
+            <input type="text/" placeholder="Search products & brands" />
+            <button class="black-btn">
+              <img
+                src="https://img.icons8.com/material-outlined/24/ffffff/search.png"
+                style="width: 20px; padding-right: 10px"
+              />Search
+            </button>
+          </div>
+        </div>
+        <div>
+          <div onclick="showCart()" class="cartButton">
+            <p>Cart</p>
+            <img
+              src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png"
+            />
+          </div>
+          <div class="signinButton">
+            <div id="nav_signin">
+              <p>Sign In</p>
+              <ul>
+                <li>
                   <img
-                    width="50%"
-                    src="https://cdn-icons.flaticon.com/png/512/666/premium/666201.png?token=exp=1635796006~hmac=fead5a874b251aca542ac69cc7ed9d17"
-                    alt=""
+                    src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png"
+                  />Your Account
+                </li>
+                <li>
+                  <img
+                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png"
                   />
-                </div>    
-              </div>
+                  Your Orders
+                </li>
+                <li>
+                  <img
+                    src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png"
+                  />
+                  Shortlist
+                </li>
+                <li>
+                  <img
+                    src="https://img.icons8.com/ios-glyphs/30/ffffff/get-cash.png"
+                  />
+                  SD Cash
+                </li>
+                <hr />
+                <div onclick="showLogin()">
+                  <p>If you are a new user</p>
+                  <p>Register</p>
+                  <button>LOGIN</button>
+                </div>
+              </ul>
+            </div>
+
+            <div>
+              <img
+                src="https://img.icons8.com/material-rounded/24/ffffff/user.png"
+                style="width: 24px"
+              />
             </div>
           </div>
         </div>
       </div>
+    </nav>
+    <!-- Top navigation ends -->
 
     <!-- abaove code is for nav bar------------------------------------ -->
 
@@ -460,41 +553,23 @@ justify-content: space-evenly;
       </div>
       <div id="upperBody">
         <div id="upperImg">
-          <div id="Slide_container">
-            <div class="slide">
-              <img
-                class="slider_img"
-                src="https://media.istockphoto.com/photos/totally-free-full-length-of-handsome-young-man-keeping-arms-while-picture-id1157131733?k=20&m=1157131733&s=612x612&w=0&h=utZ5327CRMN6amf_XZ6PDMukWeQSuUb1lfTp_4uO2gM="
-                alt=""
-              />
-            </div>
-
-            <div class="slide">
-              <img id="image1" class="slider_img" src="https://media.istockphoto.com/photos/handsome-young-african-man-looking-at-camera-and-keeping-hand-on-chin-picture-id1192089195?k=20&m=1192089195&s=612x612&w=0&h=plnkOz_fjdZ6jUPZywlpP0xo0CNVRzYBGuE-itneBpk=" alt="">
-            </div>
-
-            <div class="slide">
-              <img id="image2" class="slider_img" src="https://media.istockphoto.com/photos/curiosity-young-bearded-and-handsome-man-in-casual-clothes-is-looking-picture-id1129816771?k=20&m=1129816771&s=612x612&w=0&h=UFjzIWr49G6eDXIcUIsxjhaMt9YN2iIOOo0r2BnGThk=" alt="">
-            </div>
-
-            <div class="slide">
-              <img id="image3" class="slider_img" src="https://media.istockphoto.com/photos/fulllength-portrait-of-an-asian-man-on-a-white-background-picture-id1328526567?k=20&m=1328526567&s=612x612&w=0&h=lQr-ZO-En1MfBhgaqBZMlGluus6wZJj34n1ouO1sHV8=" alt="">
-            </div>
-
-            <div class="slide">
-              <img id="image4" class="slider_img" src="https://media.istockphoto.com/photos/man-with-bright-smile-sitting-on-the-floor-picture-id698590076?k=20&m=698590076&s=612x612&w=0&h=wcd9RMT5YvTd9LB3dZV8WOi85EN28vb2Z2Ez-jwJK_0=" alt="">
-            </div>
-
-            <span class="arrow prev" onclick=" controller(-1)">&#10094;</span>
-            <span class="arrow next" onclick=" controller(1)">&#10095;</span>
-          </div>
-
+          <div id="slideshow"></div>
           <div id="imagebottom">
-          <button class="imageBottomText" id="btn1"  onclick=" controller(-1)" >Snapdeal</button>
-          <button class="imageBottomText" id="btn2" onclick=" controller(-1)" >Download Our App</button>
-          <button class="imageBottomText" id="btn3"  onclick=" controller(-1)" >Diya Idols And More</button>
-          <button class="imageBottomText" id="btn4"onclick=" controller(-1)" >Cookware Collection</button>
-          <button class="imageBottomText" id="btn5"  onclick=" controller(-1)" >Fashion Jwellery</button>
+            <button class="imageBottomText" id="btn1" onclick=" controller(-1)">
+              Snapdeal
+            </button>
+            <button class="imageBottomText" id="btn2" onclick=" controller(-1)">
+              Download Our App
+            </button>
+            <button class="imageBottomText" id="btn3" onclick=" controller(-1)">
+              Diya Idols And More
+            </button>
+            <button class="imageBottomText" id="btn4" onclick=" controller(-1)">
+              Cookware Collection
+            </button>
+            <button class="imageBottomText" id="btn5" onclick=" controller(-1)">
+              Fashion Jwellery
+            </button>
 
             <!-- <div class="imageBottomText">Snapdeal</div>
             <div class="imageBottomText">Download Our App</div>
@@ -536,12 +611,377 @@ justify-content: space-evenly;
             </button>
           </div>
         </div>
-        <br>
+        <br />
         <!-- <div>
           <p>dhhd</p>
         </div> -->
       </div>
-         
-</body>
+      <div id="bottom_items">
+        <div class="bottom_img"><img src="deal1.png" alt="" /></div>
+        <div class="bottom_img"><img src="deal2.png" alt="" /></div>
+        <div class="bottom_img"><img src="deal3.png" alt="" /></div>
+        <!-- <div class="bottom_img">    <img src="" alt=""></div>  -->
+      </div>
+
+      <!-- <div id=" Title_text">
+
+  <h3>
+    Best Selling Products
+  </h3>
+</div>  -->
+    </div>
+    <div id="DisplayProducts">
+      <div id="ProductText">
+        <h2>Lorem ipsum dolor sit.</h2>
+      </div>
+
+      <div id="bottom_product">
+        <div class="item1">
+          <img
+            src="https://n2.sdlcdn.com/imgs/j/o/r/large/Veirdo-100-Percent-Cotton-Green-SDL302182620-1-1ba35.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item2">
+          <img
+            src="https://n3.sdlcdn.com/imgs/j/f/c/large/SM-2-in-1-Rechargeable-SDL951195659-1-126be.jpg"
+          />
+
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item3">
+          <img
+            src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"
+          />
+
+          <p>Leathers of india Leather Brown</p>
+          <p>Formal Regular Wallet</p>
+          <span style="text-decoration: line-through; color: #666666"
+            >Rs.1,499</span
+          ><span>Rs.549</span>
+        </div>
+        <div class="item4">
+          <img
+            src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item5">
+          <img
+            src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+
+        <div class="item1">
+          <img
+            src="https://n2.sdlcdn.com/imgs/j/o/r/large/Veirdo-100-Percent-Cotton-Green-SDL302182620-1-1ba35.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item2">
+          <img
+            src="https://n3.sdlcdn.com/imgs/j/f/c/large/SM-2-in-1-Rechargeable-SDL951195659-1-126be.jpg"
+          />
+
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item3">
+          <img
+            src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item4">
+          <img
+            src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        <div class="item5">
+          <img
+            src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"
+          />
+          <h3>lorem2</h3>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem, ipsum.</p>
+        </div>
+        -->
+
+        <!-- <div class="item6">
+        <img src="https://n1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg">
+        <h3>lorem2</h3>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem, ipsum.</p>
+      </div> -->
+      </div>
+    </div>
+
+    <div id="PlaystoreImg">
+      <img src="playstore.png" alt="" />
+    </div>
+
+    <div id="four-flex">
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="lock.png" height="50px" />
+        </div>
+        <p class="inside-flex-fonthead">100% SECURE PAYMENTS</p>
+        <p class="inside-flex-fontbody">
+          Moving your card details to a much more<br />secured place
+        </p>
+      </div>
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="secure.png" height="50px" />
+        </div>
+        <p class="inside-flex-fonthead">TRUSTPAY</p>
+        <p class="inside-flex-fontbody">
+          100% Payment Protection. Easy <br />Return Policy
+        </p>
+      </div>
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="help.png" height="50px" />
+        </div>
+        <p class="inside-flex-fonthead">HELP CENTER</p>
+        <p class="inside-flex-fontbody">
+          Got a question? Look no further. <br />Browse our FAQs or submit your
+          query here.
+        </p>
+      </div>
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="shop.png" height="50px" />
+        </div>
+        <p class="inside-flex-fonthead">SHOP ON THE GO</p>
+        <p class="inside-flex-fontbody">
+          Download the app and get exciting <br />app only offers at your
+          fingertips
+        </p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div>
+        <p class="footer-fonthead">POLICY INFO</p>
+        <p class="inside-flex-fontbody">
+          Privay Policy <br />
+          Terms of Sale <br />
+          Terms of USe <br />
+          Report Abuse & Tkedown Policy
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">COMPANY</p>
+        <p class="inside-flex-fontbody">
+          About Us <br />
+          Core Values <br />
+          Careers <br />
+          Blog <br />
+          Sitemap
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">SNAPDEAL BUSINESS</p>
+        <p class="inside-flex-fontbody">
+          Shopping App <br />
+          Sell on Snapdeal <br />
+          Advertise on Snapdeal <br />
+          Media Enquiries <br />
+          Be an Affiliate
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">NEED HELP ?</p>
+        <p class="inside-flex-fontbody">
+          FAQ <br />
+          Contact Us <br />
+          Online Shopping
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">SUBSCRIBE</p>
+        <div class="subs-box">
+          <input type="text" id="sub-text" placeholder="Your email address" />
+          <input type="button" id="sub-button" value="SUBSCRIBE" />
+        </div>
+        <p class="inside-flex-fontbody">
+          Register now to get updates on promotions and <br />
+          coupons.Or Download App
+        </p>
+      </div>
+    </div>
+
+    <div id="paymentconnect">
+      <div>
+        <p class="paymentconnect-fonthead">PAYMENT</p>
+        <div>
+          <img src="paymenticons.png" height="35px" />
+        </div>
+      </div>
+      <div>
+        <p>CONNECT</p>
+        <div id="connecticons">
+          <div>
+            <a href="https://www.facebook.com/Snapdeal"
+              ><img src="facebook.png" height="30px"
+            /></a>
+          </div>
+          <div>
+            <a href="https://twitter.com/snapdeal">
+              <img src="twitter.png" height="30px"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com/user/snapdeal">
+              <img src="youtube.png" height="30px"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/snapdeal/">
+              <img src="instagram.png" height="30px"
+            /></a>
+          </div>
+          <div>
+            <a href=""><img src="pinterest.png" height="30px" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-description">
+      <p class="footer-desfont">
+        Mobiles: 4G Mobiles / Smartphones / Samsung Mobiles / Micromax Mobiles /
+        Lenovo Mobiles / iPhones / Vivo Mobiles / Oppo Mobiles / Intex Mobiles /
+        Asus Mobiles <br />
+        Mobiles Accessories: Mobile Covers / Leather Mobile Covers / Printed
+        Back Covers / 10000mAh Power Banks / Ambrane Power Banks / Intex Power
+        Banks / VR Headsets / Smart Watches / Smart Bands / Fitness Bands /<br />
+        Tempered Glass / Wall Chargers / Feature Phones / Bluetooth Devices<br />
+        TVs, Audio & Video: Televisions / LED TVs / Smart Televisions / Ultra HD
+        TV / FHD TV / 3D TV / HD Ready TV / Speakers / Headphones / Earphones /
+        Samsung Televisions / Micromax Televisions / LG Televisions /<br />
+        Home Theatre Systems<br />
+        Memory Cards: 8 GB Memory Cards / 16 GB Memory Cards / 32 GB Memory
+        Cards / 64 GB Memory Cards / Sandisk Memory Cards / Samsung Memory Cards
+        / Strontium Memory Cards<br />
+        Computers: Lenovo Laptops / Acer Laptops / Apple Macbooks / Notebook /
+        Laptops / External Hard Disks / Dell Laptops / HP Laptops / Pen
+        Drives<br />
+        Camera: DSLR Cameras / Canon Cameras / Nikon Coolpix / Nikon DSLR
+        Cameras / Sony Cameras / Digital Cameras / Panasonic Cameras / Samsung
+        Cameras<br />
+        Watches: Mens Watches / Womens Watches / Casio Watches / Titan Watches /
+        Fastrack Watches / Fossil watches / Casio Edifice<br />
+        Fashion Accessories: Bags / Wildcraft / Skybags / Fastrack Bags / Shoes
+        / Floaters & Sandals / Kurta / Raymond<br />
+        Men's Clothing: Shirts / Casual Shirts / Formal Shirts / Party Wear
+        Shirts / T Shirts / Polo T shirts / Low Rise Jeans / Slim Jeans /
+        Reversible Jackets / V Neck T shirts / Henley T shirts / Printed T
+        shirts / Round Neck T shirts /<br />
+        Chinos / Hooded Sweatshirts / Kurta Payjama Sets / Dhoti Kurta Sets /
+        Cotton Shirts / Full Sleeves Casual Shirts / Full Sleeves Formal Shirts
+        / Regular Fit Formal Shirts / Silk Party Shirts<br />
+        Women's Clothing: Saree / Designer Saree / Cotton Sarees / Georgette
+        Sarees / Chiffon Sarees / Net Sarees / Anarkali Suits / Kurtis /
+        Leggings & Churidars / Embroidered Lehengas / Bridal Lehengas / Black
+        Dresses /<br />
+        Jeggings / Jeans / A Line Skirts / Women's Gowns / Women's Dresses<br />
+        Home & Kitchen: Home Decor / Paintings / Clocks / Flasks & Thermos /
+        Photo Frames / Tupperware Kitchenware / Hawkins Kitchenware / Milton
+        Kitchenware<br />
+        Books: Fiction / Non Fiction / Children & Young Adults / Competitive
+        Exams / School Books / Academic Texts / Reference / Self Help<br />
+        FMCG Offer - Top Brands: Revlon / Street Wear / St. Ives / Accu-Chek
+        Health Monitoring Devices / Nutraj - California Walnuts / JSB Massagers
+        / Park Avenue / Gillette / Airwick / Veet / Livon / Mortein / Whisper /
+        KamaSutra /<br />
+        Durex / Bio Oil<br />
+        Appliances: Air Conditioners / Air Coolers / Refrigerators / Fans /
+        Washing Machines / Mircowaves / Irons / Trimmers / Hair Dryers / Shavers
+        / Vacuum Cleaners / Air Purifiers / CCTV Cameras / Ceiling Fans / Table
+        Fans /<br />
+        Exhaust Fans / Pedestal Fans / Ceiling Fans with 4 Blades / Ceiling Fans
+        with 6 Blades<br />
+        Home Furnishing: Bed Linen / Bed Sheets / Bath Linen / Mattresses /
+        Curtains / Cushion Covers / Pillows / Carpets / Kids Bedding<br />
+        Furniture Online: Sofa Set / Sofa Cum Beds / Chairs / Dining Sets / Bean
+        Bags / Shoe Storage / Dining Chairs / Storage Cabinets / Tables and
+        Desks / Bedroom Furniture / Living Room Furniture / XXXL Bean Bags /<br />
+        Chair Shape Bean Bags / Lounger Shape Bean Bags / Muddha Shape Bean Bags
+        / Black Color Bean Bags<br />
+        Toys & Games: Soft Toys / Dolls / Musical Toys / Kids Skates / Kids
+        Skate Scooters / Barbie Games / Action Figures / Electronic Toys /
+        Action figures / Toddler Toys / Die Cast Vehicle / Ride Ons &
+        Scooters<br />
+        Todays Deals: Bestsellers / Most Searched Products / Home Utility Offers
+        / Laptops & Accessories Offers / Men's Fashion / Women's Fashion / Price
+        Point Store / Laptops & Accessories Offers<br />
+        Online Shopping: Everything below 299 / Mens Footwear / Lehenga /
+        Dresses / Mobile Phones / Womens Watches / Kurtis / Smartphones / Womens
+        Footwear / Sarees / Casual Shoes / Laptops / Mens Watches /<br />
+        Womens Casual Shoes / 4G Mobiles / Frocks / Women Suits / Tops & Tunics
+        / Gowns / Watches / Sports & Bicycles / Water Geysers / Men's Sportswear
+        / Multi Speed Bi-cycles / Mobile Batteries / Kids T-shirts /<br />
+        Girls Frocks & Junpsuits / Kids Watches / Stationery Supplies / Baby
+        Care Products / Copper Water Bottles
+      </p>
+      <p id="aboutsnap">ABOUT SNAPDEAL</p>
+      <p class="footer-desfont">
+        Snapdeal is India's leading pure-play value Ecommerce platform. Founded
+        in 2010 by Kunal Bahl and Rohit Bansal, Snapdeal is one of the top four
+        online lifestyle shopping destinations of India. Snapdeal brings
+        together a wide assortment of good quality and value- priced merchandise
+        on its platform. Snapdeal's vision is to enable the shoppers of Bharat
+        to experience the joy of living their aspirations through reliable,
+        value-for-money shopping. With a personalized, multilingual interface
+        and cutting edge technology, Snapdeal has simplified the shopping
+        experience for its value-conscious buyers by showcasing the most
+        relevant products- products that are a good functional fit with their
+        needs and of a quality that lasts- thereby delivering true value to its
+        customers. With its commitment to high service standards, Snapdeal
+        suppliers operate under a well structured ecosystem that enables them to
+        offer great quality products at affordable prices. With majority of the
+        value-seeking, middle-income, price-conscious buyers coming from the
+        non-metros, Snapdeal’s logistics networks powered by third party
+        logistics cover more than 96% of India’s pin codes enabling order
+        deliveries to more than 2500 towns and cities and expanding. Further,
+        Snapdeal's mission is to become India’s value lifestyle omni-channel
+        leader. We are excited about continuing to build a complete ecosystem
+        around value commerce, where we can serve Bharat consumers wherever they
+        are on their offline to online shopping journey. Snapdeal is part of the
+        AceVector Group and one of India’s best-known e-commerce companies with
+        an exclusive focus on the value segment.
+      </p>
+    </div>
+    <div id="lastfooter">
+      <div>
+        <p class="footer-desfont">
+          Copyright © 2020, Snapdeal Private Limited (formerly Jasper Infotech
+          Private Limited). All Rights Reserved
+        </p>
+      </div>
+      <div>
+        <p class="footer-desfont">Made with <span>❤️</span> in India</p>
+      </div>
+    </div>
+  </body>
 </html>
 <script src="dash.js"></script>

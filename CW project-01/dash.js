@@ -1,34 +1,56 @@
+//Data
+let slideshow_images = [
+  {
+    image: "https://n3.sdlcdn.com/imgs/j/8/e/Health_ID_Snapdeal_ABDM_1300X410-6c79d.jpg",
+  },
+  {
+    image: "https://n3.sdlcdn.com/imgs/k/f/v/12_april_WB_Breezy_Dresses_WEB-5febf.jpg",
+  },
+  {
+    image: "https://n1.sdlcdn.com/imgs/k/f/v/12_april_WB_Kitchen_Essentials_WEB-cca82.jpg",
 
-let imgtag = document.createElement('img');
-let slideshowEl = document.getElementById("Slide_container")
-slideshowEl.append(imgtag)
 
-let CurrentImg = 0;
-// Use the following data for slideshow
-var movieImages = [
-  "https://www.themoviedb.org/t/p/w220_and_h330_face/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
-  "https://images.indianexpress.com/2022/06/major-movie-review-1200.jpg",
-  "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/2607/1062607-h-fa693eabb41d",
-  "https://lumiere-a.akamaihd.net/v1/images/p_aladdin2019_17638_d53b09e6.jpeg",
-  "https://igimages.gumlet.io/hindi/gallery/movies/tubelight/tubelight_poster.jpg?w=160&dpr=2.6"
-]
 
-slideshowFun(movieImages) //Calling The function to pass image Array
-
-function slideshowFun(images) {
-  imgtag.setAttribute("src", images[CurrentImg])
-  if (CurrentImg === images.length - 1) {
-    CurrentImg = 0
-  } else {
-    CurrentImg++
+  },
+  {
+    image: "https://n1.sdlcdn.com/imgs/k/f/v/12_april_WB_Festive_kurta_sets_WEB_1-9d9b7.jpg",
+  },
+  {
+    image: "https://n2.sdlcdn.com/imgs/j/w/0/LightingsWeb_27sep-b4418.jpg",
+  },
+  {
+    image: "https://n1.sdlcdn.com/imgs/j/w/0/OrganizeHomeWeb_27sep-9e6e0.jpg",
+  },
+  {
+    image: "https://n2.sdlcdn.com/imgs/j/w/0/KitchenStorageWeb_27sep-7484d.jpg",
+  },
+  {
+    image: "https://n2.sdlcdn.com/imgs/j/w/0/KitchenAppliancesWeb_27sep-f91a3.jpg",
   }
 
+];
+
+//Setting inital localStorage
+// if (localStorage.getItem("users" === null)) {
+//     localStorage.setItem("users", JSON.stringify([]));
+// }
+
+function showSlideShow() {
+  let img = document.createElement("img");
+  let counter = 0;
+  img.src = slideshow_images[counter].image;
+  counter++;
+  let div = document.getElementById("slideshow");
+  div.append(img);
+  setInterval(() => {
+    div.innerHTML = "";
+    if (counter == slideshow_images.length) {
+      counter = 0;
+    }
+    img.src = slideshow_images[counter].image;
+    div.append(img);
+    counter++;
+  }, 4000);
 }
 
-
-window.addEventListener("load", function () {
-
-  // add event-listeners;
-  setInterval(slideshowFun, 2000, movieImages)
-
-});
+showSlideShow();
