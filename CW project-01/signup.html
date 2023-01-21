@@ -104,10 +104,10 @@
         <input type="password" id="password" placeholder="Password" class="form__input" />
       </div>
 
-      <a href="./login.html">
+      <a href="login.html">
         <button class="form_button" type="submit">Continue</button></a>
       <p>
-        <a href="" class="form__link">Already have an account? Login</a>
+        <a href="login.html" class="form__link">Already have an account? Login</a>
       </p>
     </form>
   </div>
@@ -142,16 +142,19 @@
 
 <script>
   function goTOsignIn() {
-    window.location.href = "signIn.html";
+    window.location.href = "login.html";
   }
   function goTocart() {
     window.location.href = "cart.html";
   }
   let registration_data = JSON.parse(localStorage.getItem("account-data")) || []
-  let myForm = document.getElementById("form");
+  let myForm = document.querySelector("form");
 
-  function checkSignIn(e) {
-    registration_data.innerHTML = "";
+
+  console.log("account");
+  // registration_data.innerHTML = "";
+  myForm.addEventListener("submit", (e) => {
+    console.log("inside registration");
     e.preventDefault();
     let name = myForm.name.value;
 
@@ -168,7 +171,7 @@
     }
 
 
-    if (name == "" || lname == "" || email == "" || pwd == "" || confirmPwd == "" || mobile == "") {
+    if (name == "" || email == "" || pwd == "" || mobile == "") {
       alert("please fill the details")
     } else {
       registration_data.push(objOfUser)
@@ -176,9 +179,13 @@
       alert("SignUp Successful")
       goTOsignIn();
     }
-  }
+
+
+  })
+
+
 
   function refresh() {
-    window.location.href = "Index.html"
+    window.location.href = "das.html"
   }
 </script>
