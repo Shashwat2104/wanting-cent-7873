@@ -1,77 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="./das.html" />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      /* Write all necessery css here  */
-      .nav {
-        /* border: 2px solid red; */
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
-      #cart-container {
-        /* border: 2px solid red; */
-        display: grid;
-        grid-template-columns: 20% 20% 20% 20%;
-        grid-gap: 20px;
-        /* margin: auto; */
-        justify-content: center;
-      }
-      #cart-container > div {
-        /* border: 2px solid red; */
 
-        padding: 10px;
-      }
-      #cart-container > div:hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="./das.html" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Write all necessery css here  */
+    .nav {
+      /* border: 2px solid red; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
-      #cart-container > div > img {
-        height: 200px;
-        width: 100%;
-      }
-      #cart-container > div > button {
-        /* display: block;
+    #cart-container {
+      /* border: 2px solid red; */
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      grid-gap: 20px;
+      /* margin: auto; */
+      justify-content: center;
+    }
+
+    #cart-container>div {
+      /* border: 2px solid red; */
+
+      padding: 10px;
+    }
+
+    #cart-container>div:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    #cart-container>div>img {
+      height: 200px;
+      width: 100%;
+    }
+
+    #cart-container>div>button {
+      /* display: block;
          margin: auto; */
-        background-color: rgb(228, 0, 70);
-        color: white;
-        padding: 7px;
-        border: none;
-        border-radius: 3px;
-        margin: 10px;
-        font-size: 20px;
-      }
-      #btnsearch {
-        font-size: 23px;
-      }
-      form > #search {
-        margin-left: 5%;
-        border: 2px solid rgb(129, 128, 128);
-        width: 70%;
-        font-size: 28px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="navBar">
-      <div id="firstDiv">
-        <div id="firstCornerdiv">
-          <p>Brand Waali Quality, Bazaar Waali Deal!</p>
-        </div>
-        <div id="scndCornerdiv">
-          <div class="firstDivConerText"><a href="">Impact@Snapdeal</a></div>
-          <div class="firstDivConerText"><a href="">Gift Cards</a></div>
-          <div class="firstDivConerText"><a href=""></a></div>
-          <div class="firstDivConerText"><a href="">Help Center</a></div>
-          <div class="firstDivConerText"><a href="">Sell On Snapdeal</a></div>
-          <!-- <div class="firstDivConerText">
+      background-color: rgb(228, 0, 70);
+      color: white;
+      padding: 7px;
+      border: none;
+      border-radius: 3px;
+      margin: 10px;
+      font-size: 20px;
+    }
+
+    #btnsearch {
+      font-size: 23px;
+    }
+
+    form>#search {
+      font-family: 'Poppins', sans-serif;
+      margin-left: 5%;
+      border: 2px solid rgb(129, 128, 128);
+      width: 70%;
+      font-size: 28px;
+    }
+
+    #checkout {
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      font-family: 'Poppins', sans-serif;
+      margin: auto;
+      width: 40%;
+      height: 280px;
+      /* border: 2px solid brown; */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      /* text-align: center; */
+    }
+
+    .sub {
+
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      /* border: 2px solid black; */
+      font-weight: 661px;
+    }
+
+    .cupon {
+
+      margin: 10px 0px 10px 0px;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0 8px 0;
+      /* border: 3px solid salmon; */
+    }
+
+    .cupon>input {
+      width: 190px;
+      height: 25px;
+      /* border: 3px solid rgb(3, 244, 112); */
+    }
+
+    .cupon button {
+      border: 3px solid salmon;
+      font-family: 'Poppins', sans-serif;
+      width: 190px;
+      height: 25px;
+      border: none;
+      border-radius: 4px;
+      color: whitesmoke;
+      background-color: rgb(228, 0, 70);
+      ;
+    }
+
+    #applybtn {
+
+      font-family: 'Poppins', sans-serif;
+      font-size: 23px;
+      height: 44px;
+      /* width: 4%; */
+    }
+
+    #applybtn:hover {
+      cursor: pointer;
+      background-color: rgb(255, 56, 116);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navBar">
+    <div id="firstDiv">
+      <div id="firstCornerdiv">
+        <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+      </div>
+      <div id="scndCornerdiv">
+        <div class="firstDivConerText"><a href="">Impact@Snapdeal</a></div>
+        <div class="firstDivConerText"><a href="">Gift Cards</a></div>
+        <div class="firstDivConerText"><a href=""></a></div>
+        <div class="firstDivConerText"><a href="">Help Center</a></div>
+        <div class="firstDivConerText"><a href="">Sell On Snapdeal</a></div>
+        <!-- <div class="firstDivConerText">
       <div id="mobileImg">
       
       
@@ -83,252 +156,316 @@
       </div>
       </div>
       </div> -->
-        </div>
-      </div>
-
-      <div id="secondDiv">
-        <a href="./das.html"
-          ><img
-            id="scndDivIMG"
-            src="https://logos-download.com/wp-content/uploads/2016/10/SnapDeal_logo_Snap_Deal.png"
-            alt=""
-        /></a>
-
-        <form>
-          <label for="search"></label>
-          <input id="search" type="search" />
-          <button id="btnsearch">Search</button>
-        </form>
-        <div id="cart">
-          <p>Cart</p>
-        </div>
-        <div id="imagecart">
-          <img width="50%" src="" alt="" />
-        </div>
-
-        <div id="signIn">
-          <div id="signbtn">sign In</div>
-
-          <div id="imagesignin">
-            <img width="50%" src="" alt="" />
-          </div>
-        </div>
       </div>
     </div>
-    <h1 id="total">
-      Your Total cart Price is:- <span id="cart-total">0</span>
-    </h1>
-    <div id="cart-container">
-      <!-- Here Append All the cart Products  -->
+
+    <div id="secondDiv">
+      <a href="./das.html"><img id="scndDivIMG" style="width: 90%;"
+          src="https://logos-download.com/wp-content/uploads/2016/10/SnapDeal_logo_Snap_Deal.png" alt="" /></a>
+
+      <form>
+        <label for="search"></label>
+        <input id="search" type="search" />
+        <button id="btnsearch">Search</button>
+      </form>
+      <div id="cart">
+        <p>Cart</p>
+      </div>
+      <div id="imagecart">
+        <img width="50%" src="" alt="" />
+      </div>
+
+      <div id="signIn">
+        <div id="signbtn">sign In</div>
+      </div>
+    </div>
+  </div>
+  <h1 id="total">
+    Your Total cart Price is:- <span id="cart-total">0</span>
+  </h1>
+  <div id="checkout">
+
+    <h1 style="text-align: center;   font-family: 'Poppins', sans-serif;">TOTAL PRICE</h1>
+    <hr>
+
+    <div class="sub">
+      <div>
+        <h3> Sub Total</h3>
+
+      </div>
+      <h3><span id="span"> 0</span></h3>
+    </div>
+    <div style="font-family: 'Poppins', sans-serif;font-size: 20px;  font-weight: bold;">
+      Got a Discount Code ?
     </div>
 
-    <div id="footer-area">
-      <div id="four-flex">
-        <div class="inside-flex">
-          <div class="icons">
-            <img src="lock.png" height="50px" />
-          </div>
-          <p class="inside-flex-fonthead">100% SECURE PAYMENTS</p>
-          <p class="inside-flex-fontbody">
-            Moving your card details to a much more secured place
-          </p>
+    <div class="cupon">
+      <input class="cupntext" type="text" placeholder="Masai30" />
+      <button id="applybtn">APPLY</button>
+    </div>
+    <a href="das.html"> <button class="Checkbtn" style="display: block;margin: auto;   font-family: 'Poppins', sans-serif;font-size: 30px;
+  height: 45px; width: 40%; background-color:rgb(228, 0, 70); color: whitesmoke ;
+  border: none; border-radius: 6px;cursor: pointer;">CHECK OUT</button></a>
+
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+  <div id="cart-container">
+    <!-- Here Append All the cart Products  -->
+  </div>
+
+  <div id="footer-area">
+    <div id="four-flex">
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="lock.png" height="50px" />
         </div>
-        <div class="inside-flex">
-          <div class="icons">
-            <img src="secure.png" height="50px" />
-          </div>
-          <p class="inside-flex-fonthead">TRUSTPAY</p>
-          <p class="inside-flex-fontbody">
-            100% Payment Protection. Easy Return Policy
-          </p>
+        <p class="inside-flex-fonthead">100% SECURE PAYMENTS</p>
+        <p class="inside-flex-fontbody">
+          Moving your card details to a much more secured place
+        </p>
+      </div>
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="secure.png" height="50px" />
         </div>
-        <div class="inside-flex">
-          <div class="icons">
-            <img src="help.png" height="50px" />
-          </div>
-          <p class="inside-flex-fonthead">HELP CENTER</p>
-          <p class="inside-flex-fontbody">
-            Got a question? Look no further. Browse our FAQs or submit your
-            query here.
-          </p>
+        <p class="inside-flex-fonthead">TRUSTPAY</p>
+        <p class="inside-flex-fontbody">
+          100% Payment Protection. Easy Return Policy
+        </p>
+      </div>
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="help.png" height="50px" />
         </div>
-        <div class="inside-flex">
-          <div class="icons">
-            <img src="shop.png" height="50px" />
-          </div>
-          <p class="inside-flex-fonthead">SHOP ON THE GO</p>
-          <p class="inside-flex-fontbody">
-            Download the app and get exciting app only offers at your fingertips
-          </p>
+        <p class="inside-flex-fonthead">HELP CENTER</p>
+        <p class="inside-flex-fontbody">
+          Got a question? Look no further. Browse our FAQs or submit your
+          query here.
+        </p>
+      </div>
+      <div class="inside-flex">
+        <div class="icons">
+          <img src="shop.png" height="50px" />
+        </div>
+        <p class="inside-flex-fonthead">SHOP ON THE GO</p>
+        <p class="inside-flex-fontbody">
+          Download the app and get exciting app only offers at your fingertips
+        </p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div>
+        <p class="footer-fonthead">POLICY INFO</p>
+        <p class="inside-flex-fontbody">
+          Privay Policy Terms of Sale Terms of USe Report Abuse & Tkedown
+          Policy
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">COMPANY</p>
+        <p class="inside-flex-fontbody">
+          About Us Core Values Careers Blog Sitemap
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">SNAPDEAL BUSINESS</p>
+        <p class="inside-flex-fontbody">
+          Shopping App Sell on Snapdeal Advertise on Snapdeal Media Enquiries
+          Be an Affiliate
+        </p>
+      </div>
+      <div>
+        <p class="footer-fonthead">NEED HELP ?</p>
+        <p class="inside-flex-fontbody">FAQ Contact Us Online Shopping</p>
+      </div>
+      <div>
+        <p class="footer-fonthead">SUBSCRIBE</p>
+        <div class="subs-box">
+          <input type="text" id="sub-text" placeholder="Your email address" />
+          <input type="button" id="sub-button" value="SUBSCRIBE" />
+        </div>
+        <p class="inside-flex-fontbody">
+          Register now to get updates on promotions and coupons.Or Download
+          App
+        </p>
+      </div>
+    </div>
+
+    <div id="paymentconnect">
+      <div>
+        <p class="paymentconnect-fonthead">PAYMENT</p>
+        <div>
+          <img src="paymenticons.png" height="35px" />
         </div>
       </div>
-
-      <div id="footer">
-        <div>
-          <p class="footer-fonthead">POLICY INFO</p>
-          <p class="inside-flex-fontbody">
-            Privay Policy Terms of Sale Terms of USe Report Abuse & Tkedown
-            Policy
-          </p>
-        </div>
-        <div>
-          <p class="footer-fonthead">COMPANY</p>
-          <p class="inside-flex-fontbody">
-            About Us Core Values Careers Blog Sitemap
-          </p>
-        </div>
-        <div>
-          <p class="footer-fonthead">SNAPDEAL BUSINESS</p>
-          <p class="inside-flex-fontbody">
-            Shopping App Sell on Snapdeal Advertise on Snapdeal Media Enquiries
-            Be an Affiliate
-          </p>
-        </div>
-        <div>
-          <p class="footer-fonthead">NEED HELP ?</p>
-          <p class="inside-flex-fontbody">FAQ Contact Us Online Shopping</p>
-        </div>
-        <div>
-          <p class="footer-fonthead">SUBSCRIBE</p>
-          <div class="subs-box">
-            <input type="text" id="sub-text" placeholder="Your email address" />
-            <input type="button" id="sub-button" value="SUBSCRIBE" />
-          </div>
-          <p class="inside-flex-fontbody">
-            Register now to get updates on promotions and coupons.Or Download
-            App
-          </p>
-        </div>
-      </div>
-
-      <div id="paymentconnect">
-        <div>
-          <p class="paymentconnect-fonthead">PAYMENT</p>
+      <div>
+        <p>CONNECT</p>
+        <div id="connecticons">
           <div>
-            <img src="paymenticons.png" height="35px" />
+            <img src="facebook.png" height="30px" />
           </div>
-        </div>
-        <div>
-          <p>CONNECT</p>
-          <div id="connecticons">
-            <div>
-              <img src="facebook.png" height="30px" />
-            </div>
-            <div>
-              <img src="twitter.png" height="30px" />
-            </div>
-            <div>
-              <img src="youtube.png" height="30px" />
-            </div>
-            <div>
-              <img src="instagram.png" height="30px" />
-            </div>
-            <div>
-              <img src="pinterest.png" height="30px" />
-            </div>
+          <div>
+            <img src="twitter.png" height="30px" />
           </div>
-        </div>
-      </div>
-
-      <div id="lastfooter">
-        <div>
-          <p class="footer-desfont">
-            Copyright © 2020, Snapdeal Private Limited (formerly Jasper Infotech
-            Private Limited). All Rights Reserved
-          </p>
-        </div>
-        <div>
-          <p class="footer-desfont">Made with <span>❤️</span> in India</p>
+          <div>
+            <img src="youtube.png" height="30px" />
+          </div>
+          <div>
+            <img src="instagram.png" height="30px" />
+          </div>
+          <div>
+            <img src="pinterest.png" height="30px" />
+          </div>
         </div>
       </div>
     </div>
-  </body>
-  <script>
-    // Write all necessery JS here
-    let Cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let Container = document.getElementById("cart-container");
 
-    // let searchForm = document.querySelector("form");
+    <div id="lastfooter">
+      <div>
+        <p class="footer-desfont">
+          Copyright © 2020, Snapdeal Private Limited (formerly Jasper Infotech
+          Private Limited). All Rights Reserved
+        </p>
+      </div>
+      <div>
+        <p class="footer-desfont">Made with <span>❤️</span> in India</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  // Write all necessery JS here
+  let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let Container = document.getElementById("cart-container");
 
-    // searchForm.addEventListener("submit", (e) => {
-    //   e.preventDefault();
-    //   let searchParams = searchForm.search.value;
+  // let searchForm = document.querySelector("form");
 
-    //   let filtered = Cart.filter((element) => {
-    //     if (
-    //       element.brand.toUpperCase().includes(searchParams.toUpperCase()) ===
-    //       true
-    //     ) {
-    //       return true;
-    //     } else {
-    //       return false;
-    //     }
-    //   });
-    //   DisplayProduct(filtered);
-    // });
+  // searchForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   let searchParams = searchForm.search.value;
 
-    function DisplayProduct(data) {
+  //   let filtered = Cart.filter((element) => {
+  //     if (
+  //       element.brand.toUpperCase().includes(searchParams.toUpperCase()) ===
+  //       true
+  //     ) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   });
+  //   DisplayProduct(filtered);
+  // });
+
+
+
+  let subtotal = document.getElementById("span")
+  let applyB = document.querySelector("#applybtn")
+  let cupntext = document.querySelector(".cupntext")
+
+  console.log(applyB);
+  let flag1 = true;
+
+
+
+  applyB.addEventListener("click", () => {
+
+    console.log(applyB.value);
+
+    if (cupntext.value === "Masai30" && flag1) {
+      let withOutDiscount = +subtotal.textContent;
+      let afterDiscount = Math.floor(
+        withOutDiscount - (withOutDiscount * 30) / 100
+      );
+      subtotal.textContent = afterDiscount
       let total = document.getElementById("cart-total");
-      Container.innerHTML = "";
-      Cart.forEach((product) => {
-        let card = document.createElement("div");
-        let image = document.createElement("img");
-        let brand = document.createElement("h3");
-        let category = document.createElement("p");
-        let details = document.createElement("p");
-        let quantity = document.createElement("span");
-        let price = document.createElement("h4");
-        let Remove = document.createElement("button");
-        let Increment = document.createElement("button");
-        let Decrement = document.createElement("button");
-        quantity.textContent = product.quantity;
-        Remove.textContent = "Remove";
-        Increment.textContent = "+";
-        Decrement.textContent = "-";
-        image.src = product.img;
-        brand.textContent = product.brand;
-        category.textContent = product.category;
-        price.textContent = `₹${product.price}`;
-        details.textContent = product.details;
-        Remove.addEventListener("click", () => {
-          Cart = Cart.filter((ele) => {
-            return ele.id !== product.id;
-          });
-          localStorage.setItem("cart", JSON.stringify(Cart));
-          DisplayProduct();
-        });
-        Increment.addEventListener("click", () => {
-          product = product.quantity++;
-          localStorage.setItem("cart", JSON.stringify(Cart));
-          DisplayProduct();
-        });
-        Decrement.addEventListener("click", () => {
-          if (product.quantity > 1) {
-            product = product.quantity--;
-            localStorage.setItem("cart", JSON.stringify(Cart));
-            DisplayProduct();
-          }
-        });
-        card.append(
-          image,
-          brand,
-          price,
-          details,
-          category,
-          Increment,
-          quantity,
-          Decrement,
-          Remove
-        );
-        Container.append(card);
-      });
+      total.innerText = afterDiscount
 
-      let sum = 0;
-      for (let i = 0; i < Cart.length; i++) {
-        sum += Cart[i].price * Cart[i].quantity;
-      }
-      total.textContent = sum;
+      flag1 = false
+
     }
-    DisplayProduct();
-  </script>
+  })
+  let Checkbtn = document.querySelector(".Checkbtn")
+
+  Checkbtn.addEventListener("click", () => {
+    alert("Product is Sucessfully Placed")
+
+  })
+
+
+  function DisplayProduct(data) {
+    let total = document.getElementById("cart-total");
+    Container.innerHTML = "";
+    Cart.forEach((product) => {
+      let card = document.createElement("div");
+      let image = document.createElement("img");
+      let brand = document.createElement("h3");
+      let category = document.createElement("p");
+      let details = document.createElement("p");
+      let quantity = document.createElement("span");
+      let price = document.createElement("h4");
+      let Remove = document.createElement("button");
+      let Increment = document.createElement("button");
+      let Decrement = document.createElement("button");
+      quantity.textContent = product.quantity;
+      Remove.textContent = "Remove";
+      Increment.textContent = "+";
+      Decrement.textContent = "-";
+      image.src = product.img;
+      brand.textContent = product.brand;
+      category.textContent = product.category;
+      price.textContent = `₹${product.price}`;
+      details.textContent = product.details;
+      Remove.addEventListener("click", () => {
+        Cart = Cart.filter((ele) => {
+          return ele.id !== product.id;
+        });
+        localStorage.setItem("cart", JSON.stringify(Cart));
+        DisplayProduct();
+      });
+      Increment.addEventListener("click", () => {
+        product = product.quantity++;
+        localStorage.setItem("cart", JSON.stringify(Cart));
+        DisplayProduct();
+      });
+      Decrement.addEventListener("click", () => {
+        if (product.quantity > 1) {
+          product = product.quantity--;
+          localStorage.setItem("cart", JSON.stringify(Cart));
+          DisplayProduct();
+        }
+      });
+      card.append(
+        image,
+        brand,
+        price,
+        details,
+        category,
+        Increment,
+        quantity,
+        Decrement,
+        Remove
+      );
+      Container.append(card);
+    });
+
+    let sum = 0;
+    for (let i = 0; i < Cart.length; i++) {
+      sum += Cart[i].price * Cart[i].quantity;
+    }
+    total.textContent = sum;
+    subtotal.textContent = sum
+  }
+  DisplayProduct();
+</script>
+
 </html>
